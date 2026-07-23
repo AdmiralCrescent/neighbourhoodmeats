@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neighbourhood Meats - Butcher and Deli</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    input:focus, textarea:focus {
+      border-color: var(--color-mustard);
+      outline: none;
+    }
+</style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main>
+    <section class="contact">
+      <h1>Contact Us</h1>
+      <form id="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+      </form>
+
+      <div class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </section>
+  </main>
+<div id="footer-placeholder"></div>
+<script src="js/theme.js"></script>
+<script src="js/components.js"></script>
+</body>
+</html>
