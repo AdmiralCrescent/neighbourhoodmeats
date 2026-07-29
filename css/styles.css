@@ -239,6 +239,19 @@ textarea{
   margin-top: 20px;
   padding: 15px;
 }
+.post-card{
+  background-color: var(--color-kraft-dark);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.badge {
+  background-color: var(--color-mustard);
+  color: var(--color-ink);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
 @media (max-width: 768px) {
   .offerings, .team, .services, .products{
     grid-template-columns: 1fr;

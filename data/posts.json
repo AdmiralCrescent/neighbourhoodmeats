@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "title": "Building the Theme Switcher",
+    "date": "2026-07-23",
+    "summary": "Adding a persistent light/dark mode toggle",
+    "category": "Dev Log",
+    "content": "Phase 1 provided some real challenges. Setting up the darkmode button was fairly straight forward but my experience in JS has been a bit rusty of late so I had to give myself a crash course to remember some things, but in the end I'm very happy with how it all came together. Ran into a little snag with GitHub as well which unfortunately wiped out some of my previous commit history but was able to fix"
+  }
+]
