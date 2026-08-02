@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function () {
+function initFilter() {
   const filterInput = document.getElementById("filter-input");
   const noResults = document.getElementById("no-results");
-  const cards = document.querySelectorAll(".product-card");
+  const cards = document.querySelectorAll(".product-card, .post-card");
 
   filterInput.addEventListener("input", function () {
     const query = this.value.toLowerCase().trim();
@@ -20,4 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     noResults.style.display = visibleCount === 0 ? "block" : "none";
   });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (!document.getElementById("blog-list")) {
+    initFilter();
+  }
 });

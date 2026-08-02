@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         blogList.appendChild(postElement);
       });
+      initFilter();
     })
     .catch(error => console.error("Error loading posts:", error));
 });
