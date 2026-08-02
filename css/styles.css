@@ -5,6 +5,7 @@
   --color-kraft: #F2EAD8;
   --color-kraft-dark: #E3D6B8;
   --color-ink: #1E1B17;
+  --color-error: #B23A2E;
 
   --font-display: "Anton", "Arial Narrow", sans-serif;
   --font-body: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -259,4 +260,9 @@ textarea{
   header nav ul{
     flex-direction: column;
   }
+}
+.error-msg {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  display: block;
 }
