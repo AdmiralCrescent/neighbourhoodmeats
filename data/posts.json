@@ -6,5 +6,29 @@
     "summary": "Adding a persistent light/dark mode toggle",
     "category": "Dev Log",
     "content": "Phase 1 provided some real challenges. Setting up the darkmode button was fairly straight forward but my experience in JS has been a bit rusty of late so I had to give myself a crash course to remember some things, but in the end I'm very happy with how it all came together. Ran into a little snag with GitHub as well which unfortunately wiped out some of my previous commit history but was able to fix"
-  }
+  },
+  {
+    "id": 2,
+    "title": "Making the Blog Load Itself",
+    "date": "2026-07-25",
+    "summary": "Pulling posts from a JSON file instead of hardcoding them",
+    "category": "Dev Log",
+    "content": "There's something a little strange about writing this post knowing it'll be rendered by the exact system it's describing. The goal here was to stop hardcoding blog posts directly into the HTML and instead pull them from a separate posts.json file, so adding a new post going forward just means adding an entry to that file rather than touching any markup. The fetch and render part was fairly mechanical, loop through the posts, build a card for each one, and append it to the page. The parts that took more thought were the extras the assignment asked for: sorting the posts newest to oldest by converting the date strings into real Date objects and comparing them, formatting those dates into something readable instead of the raw YYYY-MM-DD format, and tagging whichever post ended up first after sorting with a Latest Post badge. None of it was individually hard, but it was a good exercise in breaking one feature into a handful of smaller, testable pieces instead of trying to write it all in one pass."
+  },
+  {
+    "id": 3,
+    "title": "Getting Form Validation Working",
+    "date": "2026-07-28",
+    "summary": "Adding real-time validation to the contact form",
+    "category": "Dev Log",
+    "content": "This one turned out trickier than I expected. The actual validation logic wasn't too bad once I got going, checking for an empty name, running the email through a regex pattern, and making sure the message was at least 20 characters. I set up separate showError and clearError functions so each field could display its own inline message and clear it again once the user started fixing it. The real snag came after all of that was written and working in theory but doing nothing when I tested it. Turned out the required attribute I'd left on the inputs from Phase 1 was letting the browser's own validation intercept the form before my JavaScript ever got a chance to run. Once I pulled those out and let my own validation take over completely, everything worked as intended."
+  },
+  {
+  "id": 4,
+  "title": "Live Search Without a Page Reload",
+  "date": "2026-08-01",
+  "summary": "Adding a live filter to the Products and Blog pages",
+  "category": "Dev Log",
+  "content": "The filter itself came together pretty quickly since it followed a lot of the same patterns I'd already used elsewhere, checking the product title and description against whatever's typed into the search box and showing or hiding cards based on a match. Getting it to work on both the Products and Blog pages at once was the more interesting part. I combined the selectors so one function could grab either .product-card or .post-card depending on which page it was running on. The real issue was timing again, similar to the header and footer problem from earlier. Since the blog posts load in asynchronously, the filter was trying to run before any posts existed on the page, which meant it kept flashing a false 'No results' message before the real search kicked in. I ended up adding a check so the filter only initializes automatically on pages where the cards already exist at load time, and letting the blog script call it manually once the posts are actually rendered. Debugging that timing issue again made the pattern click a lot more the second time around."
+}
 ]
